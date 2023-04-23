@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>Период</th>
+            <th>Комментарии</th>
+            <th>Лайки</th>
+            <th>Ответы</th>
+            <th>Активность по возрасту</th>
+            <th>Города участников</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.period }}</td>
+                <td>{{ item.comments }}</td>
+                <td>{{ item.likes }}</td>
+                <td>{{ item.reposts }}</td>
+                <td>{{ item.age_activity }}</td>
+                <td>{{ item.cities }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
