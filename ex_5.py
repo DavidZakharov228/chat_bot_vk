@@ -20,8 +20,3 @@ async def interviews(*applicants):
         await asyncio.gather(*tasks)
         tasks.append(do_tasks(name, 2, task2_prep, task2_def, 0))
         await asyncio.gather(*tasks)
-
-data = [('Ivan', 5, 2, 7, 2), ('John', 3, 4, 5, 1), ('Sophia', 4, 2, 5, 1)]
-t0 = time.time()
-asyncio.run(interviews(*data))
-print(time.time() - t0)
